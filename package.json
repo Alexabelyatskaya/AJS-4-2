@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts" : {
 	"build":"webpack",
-
+  "lint": "eslint .",
+  "lintfix": "./node_modules/.bin/eslint --fix  src/",
   "test": "jest --coverage"
   },
   "keywords": [],

@@ -1,10 +1,12 @@
 export default function health(data) {
-	let f = (a, b) => {
-		if (a.health < b.health) return 1;
-	  	if (a.health == b.health) return 0;
-	  	if (a.health > b.health) return -1;
-	};
-	data.sort(f);
+  const f = (a, b) => {
+    let result = 0;
+    if (a.health < b.health) result = 1;
+    if (a.health === b.health) result = 0;
+    if (a.health > b.health) result = -1;
+    return result;
+  };
+  data.sort(f);
 
-	return data;
+  return data;
 }
